@@ -26,7 +26,7 @@ jobs:
     - name: Package Lambda Function
       run: |
         cd ../Lambda
-        zip -r9 lamda_function_payload.zip lambda_function.py
+        zip -r9 lambda_function_payload.zip lambda_function.py
         cd ../Terraform
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
