@@ -12,7 +12,7 @@ resource "aws_s3_bucket_notification" "bucket_in_notification" {
 }
 resource "aws_lambda_permission" "allow_bucket_in" {
   statement_id = "AllowExecutionFromS3Bucket"
-  action = "lamda:InvokeFunction"
+  action = "lambda:InvokeFunction"
   function_name = aws_lambda_function.file_processing_function.arn
   principal = "s3.amazonaws.com"
   source_arn = "${aws_s3_bucket.bucket_in.arn}"
